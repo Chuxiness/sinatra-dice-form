@@ -1,9 +1,7 @@
-howdy
-<%= params %>
-
-
+<h1><%= @num_dice%>d<%= @num_sides%></h1>
+<a href="/process_roll/?dice=<%=@num_dice>&sides=<%=@num_sides%>">Roll again</a> | <a href="/">Go back home</a>
 <ol>
 <% @rolls.each do |a_rolls| %>
-  <li> Result: <%= a_rolls %> </li>
+  <li> <em>Result:</em> <strong> <%= a_rolls %> </strong> </li>
 <% end %>   
 </ol>
